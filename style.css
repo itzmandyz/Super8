@@ -1,0 +1,131 @@
+/* ========================= CONFIGURAÇÕES INICIAIS ========================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }                   /* Reset básico */
+body { font-family: "Helvetica Neue", Arial, sans-serif; color: #333; background-color: #fff; } /* Fonte e cor base */
+a { text-decoration: none; color: inherit; }                           /* Links sem sublinhado */
+ul { list-style: none; }                                               /* Remove bolinhas */
+
+
+/* ========================= HEADER ========================= */
+.header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; border-bottom: 1px solid #ddd; } /* Estrutura do topo */
+.logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }   /* Estilo da logo */
+.nav ul { display: flex; gap: 30px; }                                  /* Itens do menu em linha */
+.nav a { font-size: 0.95rem; font-weight: 500; transition: color 0.3s; } /* Efeito suave */
+.nav a:hover { color: #2e6444; }                                       /* Verde escuro */
+
+/* ========================= HERO SECTION ========================= */
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 80px 60px; gap: 50px; } /* Layout de destaque */
+.hero-text { flex: 1; }                                                /* Metade do espaço */
+.hero-text h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px; color: #2e2e2e; }
+.hero-text p { font-size: 1rem; line-height: 1.6; color: #555; margin-bottom: 30px; max-width: 500px; }
+.btn { display: inline-block; background-color: #2e6444; color: white; padding: 14px 28px; border-radius: 4px; font-weight: bold; letter-spacing: 0.5px; transition: background-color 0.3s; }
+.btn:hover { background-color: #234d33; }
+.hero-image { flex: 1;}
+.hero-image img { width: 100%; height: auto; display: block; object-fit: contain; border-radius: 20px; }
+
+/* ========================= QUOTE SECTION ========================= */
+.quote { background-color: #fec20e; color: #fff; text-align: center; font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 500; line-height: 1.4; padding: 100px 10px; display: flex; justify-content: center; align-items: center; }
+.quote p { max-width: 900px; margin: 0 auto; }
+
+/* ========================= PRODUCTS SECTION ========================= */
+.products { background-color: rgba(254, 194, 14, 0.2); padding: 100px 40px; text-align: center;} 
+.section-title { font-family: 'Helvetica';font-size: 3.7rem; color: #222; margin-bottom: 40px; }
+.product-tabs { margin-bottom: 50px; }
+.product-tabs .tab { background: none; border: none; font-size: 1rem; font-weight: 600; margin: 0 10px; padding: 10px 20px; color: #444; cursor: pointer; transition: all 0.3s ease; }
+.product-tabs .tab.active, .product-tabs .tab:hover { border-bottom: 2px solid #0c3c27; color: #0c3c27; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; max-width: 1100px; margin: 0 auto 60px; }
+.product-card { background-color: #fff; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); padding: 20px; transition: transform 0.3s ease; }
+.product-card:hover { transform: translateY(-5px); }
+.product-card img { width: 100%; border-radius: 12px; }
+.product-card h3 { font-size: 1.3rem; color: #2b2b2b; margin-top: 20px; }
+.product-card p { font-size: 0.95rem; color: #555; margin-top: 10px; line-height: 1.5; }
+.product-card .price { display: block; margin-top: 15px; font-weight: 700; color: #0c3c27; }
+
+/* Botão genérico */
+.btn { 
+    background-color: #f37421; /* Cor de fundo Laranja */
+    color: #fff; 
+    text-decoration: none; 
+    padding: 16px 34px; 
+    border-radius: 25px; 
+    font-weight: 600; 
+    transition: background-color 0.3s ease; 
+}
+.btn:hover { 
+    background-color: #f37421; /* A cor de hover é a mesma, o que pode ser um erro */
+}
+
+/* ========================= COVERAGE SECTION ========================= */
+.coverage { background-color: rgba(254, 194, 14, 0.2); text-align: center; padding: 120px 40px; border-top: 1px solid rgba(0, 0, 0, 0.1);   /* linha fina acima */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
+.coverage-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; gap: 60px; }
+.coverage-image { flex: 1 1 45%; }
+.coverage-image img { width: 100%; border-radius: 20px; object-fit: cover; }
+.coverage-text { flex: 1 1 45%; text-align: left; }
+.coverage-text h2 { font-family: 'Helvetica', serif; font-size: 2.2rem; color: #0c3c27; margin-bottom: 25px; }
+.coverage-text p { font-size: 1.1rem; color: #444; line-height: 1.6; margin-bottom: 30px; max-width: 500px; }
+.coverage-text .btn { background-color: #f37421; color: #fff; text-decoration: none; padding: 12px 30px; border-radius: 25px; font-weight: 600; transition: background-color 0.3s ease; }
+.coverage-text .btn:hover { background-color: #f37421; }
+
+/* --- Responsividade Coverage --- */
+@media (max-width: 900px) {
+  .coverage-content { flex-direction: column; text-align: center; }
+  .coverage-text { text-align: center; }
+  .coverage-text p { margin: 0 auto 30px; }
+}
+
+/* ========================= TEAM SECTION ========================= */
+:root { --dark-green: #004d40; }                                       /* Variável global */
+
+.team-section { padding: 50px 15px; background-color: rgba(254, 194, 14, 0.2); text-align: center;}
+.team-grid { display: flex; justify-content: center; gap: 15px; padding: 20px 0; transition: opacity 0.3s ease; }
+.team-member { flex: 1; max-width: 180px; text-align: center; border-radius: 8px; overflow: hidden; position: relative; transition: transform 0.3s ease, opacity 0.3s ease; }
+.team-member img { width: 100%; height: 250px; object-fit: cover; display: block; border-radius: 8px; }
+.member-info { padding: 10px 5px; background-color: var(--background-color); }
+.member-info h3 { font-size: 1.1em; color: #ce1b6c; margin-bottom: 3px; }
+.member-info p { font-size: 0.9em; color: #555; }
+
+/* Hover */
+.team-grid:hover .team-member { opacity: 0.5; }
+.team-grid:hover .team-member:hover { opacity: 1; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .team-grid { flex-wrap: wrap; gap: 20px; }
+  .team-member { flex: 1 1 calc(33.333% - 20px); max-width: none; }
+}
+@media (max-width: 600px) {
+  .team-member { flex: 1 1 calc(50% - 20px); }
+  .team-grid:hover .team-member { opacity: 1; }
+  .team-grid:hover .team-member:hover { transform: none; box-shadow: none; }
+}
+
+/* ========================= NEWSLETTER ========================= */
+.newsletter { background-color: #1ebfe9; color: #2b2b2b; text-align: center; padding: 100px 20px; font-family: 'Helvetica', serif; }
+.newsletter-content { max-width: 700px; margin: 0 auto; }
+.newsletter h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; }
+.newsletter p { font-family: 'Inter', sans-serif; font-size: 1.1rem; margin-bottom: 40px; color: #2b2b2b; }
+.newsletter-form { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+.newsletter-form input { padding: 14px 20px; border: none; border-radius: 30px; font-size: 1rem; flex: 1 1 250px; max-width: 350px; outline: none; }
+.newsletter-form button { background-color: #ce1b6c; color: #fff; border: none; border-radius: 30px; padding: 14px 35px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s ease; }
+.newsletter-form button:hover { background-color: #ce1b6c; }
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .newsletter h2 { font-size: 2rem; }
+  .newsletter-form { flex-direction: column; align-items: center; }
+  .newsletter-form input, .newsletter-form button { width: 100%; max-width: 400px; }
+}
+
+/* ========================= FOOTER ========================= */
+.footer { background-color: #ce1b6c; color: #fff; text-align: center; padding: 60px 20px 30px; font-family: 'Helvetica', sans-serif; }
+.footer-content { display: flex; flex-direction: column; align-items: center; gap: 25px; margin-bottom: 20px; }
+.footer-logo { font-family: 'Helvetica', serif; font-size: 1.8rem; font-weight: 700; color: #ffb83f; }
+.footer-nav ul { list-style: none; display: flex; gap: 25px; padding: 0; margin: 0; }
+.footer-nav a { color: #fff; text-decoration: none; font-weight: 500; transition: opacity 0.3s ease; }
+.footer-nav a:hover { opacity: 0.7; }
+.footer-copy { font-size: 0.9rem; opacity: 0.8; }
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .footer-nav ul { flex-direction: column; gap: 10px; }
+}
